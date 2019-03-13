@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Llamadas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let personaje of personajes" (click)="personajeNav( personaje )">
+      <ion-avatar item-start>
+        <img [src]="personaje.img">
+      </ion-avatar>
+      <h2>{{ personaje.nombre }}</h2>
+      <h3>{{ personaje.titulo }}</h3>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
